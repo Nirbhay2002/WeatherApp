@@ -3,28 +3,32 @@ import React from 'react';
 
 function App() {
 
-  const [allWeather, setAllWeather] = React.useState({});
-  const url="http://api.weatherstack.com/current?access_key=a9e46baa27e226e744e600d52ef3cc2f&query=Chandigarh"
+  const [currentWeather, setCurrentWeather] = React.useState({});
+  const url="http://api.weatherstack.com/current?access_key=a9e46baa27e226e744e600d52ef3cc2f&query=Chandigarh";
 
   React.useEffect(() =>{
     fetch(url)
     .then(res => res.json())
-    .then(data => setAllWeather(data.current))
+    .then(data => setCurrentWeather(data.current))
   }, []);  
-
-  console.log(allWeather);
 
   const weatherData = {
     "city": "Chandigarh",
-    "temp": allWeather.temperature,
-    "time": allWeather.observation_time,
-    "tod": allWeather.is_day === "yes" ? "Day": "Night",
-    "weather": allWeather.weather_descriptions
+    "temp": currentWeather.temperature,
+    "time": currentWeather.observation_time,
+    "tod": currentWeather.is_day === "yes" ? "Day": "Night",
+    "weather": currentWeather.weather_descriptions,
+    "icon": currentWeather.weather_icons,
+    "humidity": currentWeather.humidity, //in %
+    "wind_speed": currentWeather.wind_speed, //in kmph
+    "precipitation": currentWeather.precip
   };
 
   return (
     <div className="App">
-      <Card cityWeather = {weatherData}/>
+      <div className="card-container">
+        <Card cityWeather = {weatherData}/>
+      </div>
     </div>
   );
 }
