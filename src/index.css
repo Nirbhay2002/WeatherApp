@@ -1,9 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');
 
 body{
   margin: 0;
   background: rgb(42, 42, 65);
 }
+
+/* NAVBAR */
+
+.navbar{
+  width: 100%;
+  background:rgb(14, 14, 24);
+  display: flex;
+  justify-content: space-between;
+  /* border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
+  align-items: center;
+}
+.navbar h1{
+  color:rgb(112, 201, 243);
+  margin-left: 10%;
+  font-family: 'Lobster', cursive;
+  font-size: 3.5vw;
+}
+.navbar-links{
+  color: white;
+  margin-right: 10%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2vw;
+  background:rgb(14, 14, 24);
+  cursor: pointer;
+}
+.navbar-dropdown{
+  width: 100%;
+  background:rgb(14, 14, 24);
+  text-align: center;
+}
+
+.navbar-dropdown select{
+  background:rgb(42, 42, 65);
+  color: white;
+  /* rgb(66, 66, 66) */
+  border: solid 0px;
+  margin: 3%;
+  width: 30%;
+  border-radius: 10px;
+  font-size: 1.5vw;
+  padding: 2%;
+}
+
+/* .navbar-dropdown option{
+  background: rgb(14, 14, 24);
+  border: solid 0px;
+  color: rgb(0, 204, 255);
+  font-size: 1vw;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 2%;
+} */
+
+/* MAIN CONTENT */
+
+.content-heading{
+  text-align: center;
+  font-size: 3.5vw;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(0, 204, 255);
+}
+
 .card-info{
   background: rgb(28, 25, 44);
   border-radius: 30px;
@@ -14,6 +77,7 @@ body{
   height: 40%;
   font-size: 2vw;
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 10%;
 }
 .card-left{
   border-radius: 30px;
