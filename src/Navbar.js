@@ -10,12 +10,6 @@ const Navbar = ({weather,handleChange}) => {
         });
     };
 
-    
-
-    // const handleSubmit = (event) =>{
-    //     event.preventDefault();
-    // }
-
     const countryArray = weather.map(location => {
         return location.Country.EnglishName;
     });
@@ -42,10 +36,7 @@ const Navbar = ({weather,handleChange}) => {
                 <div className="navbar-dropdown">
                     <form>
                         <select onChange={handleChange}>
-                            {/* <option>India</option>
-                            <option>United States of America</option>
-                            <option>China</option>
-                            <option>Canada</option> */}
+
                             {options}
                         </select> <br></br>
                     </form>
